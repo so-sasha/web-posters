@@ -1,0 +1,81 @@
+@import "reset.css";
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #000;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+.box {
+  width: 90vw;
+  height: 30vh;
+  font-size: 8vw;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  letter-spacing: 1vw;
+}
+
+.is-white {
+  background: #fff;
+  animation: shake 1s ease-in reverse infinite;
+}
+
+.is-blue {
+  background: #0066ff;
+  animation: shake 1s ease-in infinite;
+}
+
+.is-red {
+  background: #ff0000;
+  animation: shake 1s ease-in infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(-5vh, -1vh) rotate(0);
+  }
+
+  50% {
+    transform: translate(5vh, 0) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(5vh, -1vh) rotate(1deg);
+  }
+
+  75% {
+    transform: translate(-5vh, 0) rotate(0);
+  }
+
+  100% {
+    transform: translate(-5vh, 1vh) rotate(0);
+  }
+}
+
+.bg-text {
+  color: #fff;
+  font-size: 4vw;
+  letter-spacing: 1vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: -1;
+}
